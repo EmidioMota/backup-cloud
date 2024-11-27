@@ -1,0 +1,11 @@
+version: '3.10'
+services:
+  backup-demo:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      AWS_ACCESS_KEY_ID: "sua-access-key"
+      AWS_SECRET_ACCESS_KEY: "sua-secret-key"
+    volumes:
+      - ./data:/app/data
